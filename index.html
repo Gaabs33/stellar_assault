@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="STELLAR ASSAULT: shoot 'em up pixel-art com campanha de dez fases, modo solo e cooperativo local.">
+    <title>STELLAR ASSAULT — 16-Bit Campaign</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main class="game-page">
+        <header class="game-header">
+            <p class="eyebrow">16-bit tactical campaign // 10 stages</p>
+            <h1>STELLAR ASSAULT</h1>
+            <p class="subtitle">Horizontal shoot 'em up em JavaScript puro, Canvas e Web Audio</p>
+        </header>
+
+        <section class="game-layout" aria-label="Gameplay e painel tecnico">
+            <section class="game-frame" aria-label="Area do jogo">
+                <canvas
+                    id="gameCanvas"
+                    width="1440"
+                    height="810"
+                    aria-label="Jogo STELLAR ASSAULT. Campanha de dez fases com modo solo, cooperativo e Developer Mode."
+                >
+                    Seu navegador nao oferece suporte ao Canvas do HTML5.
+                </canvas>
+            </section>
+
+            <aside id="debugPanel" class="debug-panel" aria-label="Painel de debug" hidden>
+                <h2>DEBUG PANEL</h2>
+                <dl>
+                    <div><dt>FPS</dt><dd data-debug="fps">-</dd></div>
+                    <div><dt>Mode</dt><dd data-debug="mode">-</dd></div>
+                    <div><dt>Stage</dt><dd data-debug="stage">-</dd></div>
+                    <div><dt>State</dt><dd data-debug="stageState">-</dd></div>
+                    <div><dt>Progress</dt><dd data-debug="stageProgress">-</dd></div>
+                    <div><dt>Stage Time</dt><dd data-debug="stageTime">-</dd></div>
+                    <div><dt>Campaign Time</dt><dd data-debug="campaignTime">-</dd></div>
+                    <div><dt>Enemies</dt><dd data-debug="enemies">-</dd></div>
+                    <div><dt>Player Bullets</dt><dd data-debug="playerBullets">-</dd></div>
+                    <div><dt>Enemy Bullets</dt><dd data-debug="enemyBullets">-</dd></div>
+                    <div><dt>Boss</dt><dd data-debug="bossState">-</dd></div>
+                    <div><dt>Boss HP</dt><dd data-debug="bossHp">-</dd></div>
+                    <div><dt>Boss Attack</dt><dd data-debug="bossAttack">-</dd></div>
+                    <div><dt>Attack State</dt><dd data-debug="bossAttackState">-</dd></div>
+                    <div><dt>Minions</dt><dd data-debug="bossMinions">-</dd></div>
+                    <div><dt>Developer</dt><dd data-debug="developer">-</dd></div>
+                    <div><dt>P1 X/Y HP</dt><dd data-debug="p1">-</dd></div>
+                    <div><dt>P2 X/Y HP</dt><dd data-debug="p2">-</dd></div>
+                </dl>
+            </aside>
+        </section>
+
+        <section class="instructions" aria-label="Controles do jogo">
+            <p><strong>P1</strong> WASD / Space: tiro / E: especial</p>
+            <p><strong>P2</strong> Setas / Right Shift: tiro / Left Shift: especial</p>
+            <p><strong>Menu</strong> W/S ou setas / Enter / Esc na tela de controles</p>
+            <p id="gameStatus" class="status" aria-live="polite">Carregando jogo...</p>
+        </section>
+
+        <noscript>
+            <p class="noscript-message">Ative o JavaScript para executar o jogo.</p>
+        </noscript>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

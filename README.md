@@ -85,9 +85,7 @@ http://localhost:8000
 
 ## Tests
 
-The project includes a browser-based test runner.
-
-Start a local server and open:
+The project includes a browser-based test runner. Start a local server and open:
 
 ```text
 http://localhost:8000/tests/test-runner.html
